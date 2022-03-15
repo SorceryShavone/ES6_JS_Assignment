@@ -9,8 +9,8 @@
 <body>
     
 
-    <h1> ES6 Assingment Questions </h1>
-    <p id="demo"></p>
+    <h1> ES6 Assignment Questions </h1>
+    <div id="demo"></div>
 
 <script>
 class Employee {
@@ -22,15 +22,21 @@ class Employee {
     }
     
     present () {
-        return this.name + 'Id number is' + this.employeeId + '.'
+        return this.name + 'Id number is' + this.employeeId + '.';
+       
 
+       
     }
-    
 }
 
-/*const storeEmployee = new Employee("Taylor" + '<br>');
+    //const bookStoreEmployee = new Employee("Techbridge");
+    //document.write(bookStoreEmployee.present);
 
-document.write(storeEmployee.person); */
+
+    const storeEmployee = new Employee("Techbridge Employees" + '<br>');
+    document.write(storeEmployee.person); 
+
+/* Question #2 */
 
 class Manager extends Employee {
     constructor(name, manageList, changePermissions) {
@@ -44,6 +50,8 @@ class Manager extends Employee {
     }
 }
 
+    const storeManager = new Manager("Techbridge Managers" + '<br>');
+    document.write(storeManager.person); 
 
 /* Question #3 */
 
@@ -57,11 +65,11 @@ console.log("den:", den);
 console.log("nor:", nor)
 
 
-/*document.write(countries); */
+document.write(countries + '<br>'); 
+
 
 
 /* Question #4 */
-
 
 const rectangle = {
     width: 20,
@@ -74,10 +82,15 @@ const rectangle = {
 
    function myShape ({width, height, area, perimeter}) {
         const message = 'The area of the rectangle is ' + area; 
-      /*  document.getElementById("demo").innerHTML = message */
+        console.log('rectangle:', rectangle);
+        document.write(message);
      } 
-     console.log('rectangle:', rectangle);
+
+
+     
     
+
+
     /*Question #5 */
 
     /* use spread operator, array .map() method, and >1 arrow function
@@ -91,8 +104,8 @@ const rectangle = {
     sortedValues = () => valuesCombined.sort((a,b) => a-b);
 
 
-     const finalList = sortedValues.map((item) => <p>{item}</p>
 
+    //const finalList = sortedValues.map((item) => <p>{item}</p>)
 
 
 
@@ -121,7 +134,45 @@ const myList = myArray.map((item) => doSomething(item));
 document.write("myList: ", myList);
 */
 
+const myArray = ["apple", "banana", "orange"];
+document.write("myArray: ", myArray);
 
+/* function doSomething(val) {
+    return "<p>" + val + "</p>";
+} */
+
+    const vehicleOne = {
+      brand: 'Ford',
+      model: 'Mustang',
+      type: 'car',
+      year: 2021,
+      color: 'red'
+    }
+
+    const motorcycle = {
+      model: 'Ninja',
+      brand: 'Honda',
+      color: 'green',
+      year: 2020,
+      numberOfWheels: 2,
+      doSomething() {
+        return true;
+      }
+    }
+
+    processVehicle(vehicleOne);
+    processVehicle(motorcycle);
+
+    function processVehicle({
+      type,
+      color,
+      brand,
+      model
+    }) {
+      const message = 'My ' + type + ' is a ' + color + ' ' + brand + ' ' + model + '.';
+
+      document.getElementById("demo").innerHTML += message + '<br>';
+    }
 
 </script>
 </body>

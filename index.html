@@ -34,7 +34,7 @@ class Employee {
 
 
     const storeEmployee = new Employee("Techbridge Employees" + '<br>');
-    document.write(storeEmployee.person); 
+    document.write("<p>" + 'Question 1: Test message - ' + storeEmployee.person + "</p>"); 
 
 /* Question #2 */
 
@@ -51,7 +51,7 @@ class Manager extends Employee {
 }
 
     const storeManager = new Manager("Techbridge Managers" + '<br>');
-    document.write(storeManager.person); 
+    document.write("<p>" + 'Question 2: Test message - ' + storeManager.person + "</p>"); 
 
 /* Question #3 */
 
@@ -65,7 +65,7 @@ console.log("den:", den);
 console.log("nor:", nor)
 
 
-document.write(countries + '<br>'); 
+document.write("<p>" + 'Question 3: Test message - ' + countries + "</p>"); 
 
 
 
@@ -83,7 +83,7 @@ const rectangle = {
    function myShape ({width, height, area, perimeter}) {
         const message = 'The area of the rectangle is ' + area; 
         console.log('rectangle:', rectangle);
-        document.write(message);
+        document.write("<p>" + 'Question 4: Test message - ' + message+ "</p>");
      } 
 
 
@@ -100,15 +100,61 @@ const rectangle = {
 
     const valuesCombined = [... evens, ...odds]; 
     console.log("valuesCombined", valuesCombined);
-    
-    sortedValues = () => valuesCombined.sort((a,b) => a-b);
+
+    let sortedList =  valuesCombined.sort((a,b) => a-b)
+    console.log("sortedList:", sortedList);
+
+    let doSomething = (val) => {
+     document.write(val + ",");
+    };
+
+     const myList = sortedList.map((item) => doSomething(item));
+
+//End of Answers to Assignment
+
+
+
+
+
+
+
+
+
+
+
+   /* 
+    Below creates a question 5 answer before every input in the number string
+   let doSomething = (val) => {
+     document.write( "Question 5 Answer -" + val + ",");
+    }; */
+
+
+
+    //document.write(sortedList);
+
+    //const sortedValues = x.map((item) => <p>{item}</p>);
+ 
+
+    //let sortedValues = () => valuesCombined.sort((a,b) => a-b);
+   // let sortedValues = valuesCombined.sort((a,b) => a-b);
+    // console.log("sortedValues", sortedValues);
+
+   // let finalList = (sortedValues) => sortedValues();
+    //console.log("finalList:", finalList);
+
+   // let sortedValues = () => "valuesCombined.sort((a,b) => a-b)";
+    //console.log("sortedValues:", sortedValues);
+
+   /* finalList = sortedValues.map(function(element) {
+        return element;
+    }); */
+
+    //console.log("finalList:", finalList);
+
 
 
 
     //const finalList = sortedValues.map((item) => <p>{item}</p>)
-
-
-
 
 
 
@@ -117,63 +163,6 @@ const rectangle = {
    document.getElementById(valuesCombined).innerHTML = valuesCombined 
 
    */
-
-   /*
-   const myArray = ["apple", "banana", "orange"];
-document.write("myArray: ", myArray);
-
-
-   let doSomething = (val) => {
-  document.write("doSomething val: ", val);
-  let output = "<p>" + val + "</p>";
-  document.getElementById("demo").innerHTML += output;
-  return output;
-};
-
-const myList = myArray.map((item) => doSomething(item));
-document.write("myList: ", myList);
-*/
-
-const myArray = ["apple", "banana", "orange"];
-document.write("myArray: ", myArray);
-
-/* function doSomething(val) {
-    return "<p>" + val + "</p>";
-} */
-
-    const vehicleOne = {
-      brand: 'Ford',
-      model: 'Mustang',
-      type: 'car',
-      year: 2021,
-      color: 'red'
-    }
-
-    const motorcycle = {
-      model: 'Ninja',
-      brand: 'Honda',
-      color: 'green',
-      year: 2020,
-      numberOfWheels: 2,
-      doSomething() {
-        return true;
-      }
-    }
-
-    processVehicle(vehicleOne);
-    processVehicle(motorcycle);
-
-    function processVehicle({
-      type,
-      color,
-      brand,
-      model
-    }) {
-      const message = 'My ' + type + ' is a ' + color + ' ' + brand + ' ' + model + '.';
-
-      document.getElementById("demo").innerHTML += message + '<br>';
-    }
-
 </script>
 </body>
 </html>

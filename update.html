@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuous Learning</title>
+</head>
+<body>
+
+    <h1> ES6 Assignment Questions - Code Refactoring </h1>
+    <div id="demo"></div>
+
+<script>
+
+
+//Updated Question 1 & 2 based on class review 
+        class Employee {
+            constructor(name, person, employeeId, generalPermissions, storeNumber) {
+                this.state = {
+                person: name,
+                employeeId: employeeId,
+                generalPermissions: generalPermissions,
+                storeNumber: storeNumber,    
+                }
+            }
+                present () {
+                    return this.name + 'Id number is' + this.employeeId + '.';
+            }
+    }  
+          
+/* Will ask in class if this is possible instead
+        class Employee {
+            constructor(state) {
+                this.state = {
+                person: name,
+                employeeId = employeeId,
+                generalPermissions = generalPermissions,
+                storeNumber = storeNumber,    
+                }
+            }
+        }
+        
+
+    ************************
+    so then manager could simply super() --> super(state) and constructor (state, ...additional Manager properties)
+
+*/
+
+        class Manager extends Employee {
+            constructor(name, person, employeeId, generalPermissions, storeNumbermanageList, changePermissions) {
+                super(name, person, employeeId, generalPermissions, storeNumber);
+                this.manageList = manageList;
+                this.changePermissions = changePermissions;
+    }
+
+    show() {
+        return this.present() + 'This person manages' + this.manageList
+    }
+}
+
+</script>
+</body>
+</html>
